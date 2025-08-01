@@ -23,7 +23,7 @@ if 'original_pool' not in st.session_state:
     st.session_state.awaiting_input = False
     st.session_state.box_counter = 1
 
-st.title("🧠 Math Train Game")
+st.title("🎲 Math Train Game")
 
 # --- Run and Point Calculation ---
 def calculate_runs():
