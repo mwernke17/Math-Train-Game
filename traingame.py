@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 import random
 
 # Points mapping for runs (run length -> points)
