@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import random
 
 # Points mapping for runs (run length -> points)
@@ -66,7 +66,7 @@ def get_next_number():
         points = calculate_points(runs)
         runs_str = ", ".join(str(r) for r in runs)
         st.markdown(
-            f"<div style='font-size:22px; color:green;'>✅ All 20 numbers shown. Runs: {runs_str}. Points: {points}. Click 'Reset' to start again.</div>",
+            f"<div style='font-size:22px; color:green;'>✅ Game Finished. Your Runs: {runs_str}. Your Score: {points}. <br> Click 'Reset' to start again.</div>",
             unsafe_allow_html=True
         )
         st.session_state.current_number = None
