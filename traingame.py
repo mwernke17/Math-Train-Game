@@ -66,7 +66,7 @@ def get_next_number():
         points = calculate_points(runs)
         runs_str = ", ".join(str(r) for r in runs)
         st.markdown(
-            f"<div style='font-size:22px; color:green;'>✅ Game Finished. Your Runs: {runs_str}. Your Score: {points}. <br> Click 'Reset' to start again.</div>",
+            f"<div style='font-size:22px; color:green;'>✅ Game Finished. Your Runs: {runs_str}. Your Score: {points}. Click 'Reset' to start again.</div>",
             unsafe_allow_html=True
         )
         st.session_state.current_number = None
