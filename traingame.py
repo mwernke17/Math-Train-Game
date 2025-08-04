@@ -8,9 +8,20 @@ import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+# Get current UTC time with tz info
 utc_now = datetime.now(tz=ZoneInfo("UTC"))
+
+# Convert to desired timezone
 local_time = utc_now.astimezone(ZoneInfo("America/New_York"))
-formatted_time = local_time.strftime('%Y-%m-%d %H:%M:%S')
+
+# Format to string
+formatted_time = local_time.strftime("%Y-%m-%d %H:%M:%S")
+
+st.write(f"Local time: {formatted_time}")
+
+import sys
+st.write(f"Python version: {sys.version}")
+
 
 # --- Google Sheets Setup ---
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
