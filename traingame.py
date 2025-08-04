@@ -5,6 +5,12 @@ from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 import json
 import os
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+utc_now = datetime.now(tz=ZoneInfo("UTC"))
+local_time = utc_now.astimezone(ZoneInfo("America/New_York"))
+formatted_time = local_time.strftime('%Y-%m-%d %H:%M:%S')
 
 # --- Google Sheets Setup ---
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
