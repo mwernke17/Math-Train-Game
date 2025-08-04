@@ -17,12 +17,6 @@ local_time = utc_now.astimezone(ZoneInfo("America/New_York"))
 # Format to string
 formatted_time = local_time.strftime("%Y-%m-%d %H:%M:%S")
 
-st.write(f"Local time: {formatted_time}")
-
-import sys
-st.write(f"Python version: {sys.version}")
-
-
 # --- Google Sheets Setup ---
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 
